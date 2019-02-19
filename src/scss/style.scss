@@ -18,17 +18,86 @@ body{
   font-family: 'Comfortaa', cursive;
 }
 
+.no-click {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* supported by Chrome and Opera */
+}
+
+.hidden {
+  display: none !important;
+}
+
+.row {
+  justify-content: center;
+  margin: 15px 0;
+}
+
+.power {
+  font-size: 1.25em;
+}
+
+.upgrade {
+
+}
+
+.pill-button {
+  padding: 10px;
+  width: 350px;
+  margin: 0 auto;
+  background: #505050;
+  border-radius: 35px;
+  color: white;
+  &:hover {
+    background: lighten(#505050, 5);
+  }
+  &:active {
+    background: #505050;
+  }
+}
+
 .svg-container {
-  width: 100%;
+  width: 350px;
   height: 350px;
   display: flex;
   position: relative;
   justify-content: center;
   align-items: center;
+  &:active {
+    -webkit-animation: click-anim 0.1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: click-anim 0.1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  }
+}
+
+@-webkit-keyframes click-anim {
+  0% {
+    -webkit-transform: scale(0.95);
+    transform: scale(0.95);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes click-anim {
+  0% {
+    -webkit-transform: scale(0.95);
+    transform: scale(0.95);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
 }
 
 .svg-text {
   position: absolute;
+  padding: 175px;
+  font-size: 2em;
+  line-height: 0;
 }
 
 svg {

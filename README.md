@@ -1,2 +1,8 @@
-# gulp-es6
-Gulpfile setup for Javascript ES6 compiling, plus SCSS, images, and fonts handling
+# wsd2018 game
+Bootstrapped with es6-gulp
+
+to run dev:
+
+'npm i -g gulp-cli'
+'npm i'
+'gulp watch'
